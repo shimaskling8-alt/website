@@ -1093,7 +1093,7 @@ function App() {
               <li>
                 <span className="text-amber-300 font-semibold">25%</span> — Shared with eligible OG Solana Holders (the “split-list”).{' '}
                 <span className="text-gray-200 italic">
-                  Shares of the split are proportional to KS holdings — more KS held = larger profit share.
+                  Shares of the split are proportional to KS holdings: more KS held = larger profit share.
                 </span>
               </li>
               <li><span className="text-amber-300 font-semibold">50%</span> — Directed to KS-SOL buybacks.</li>
