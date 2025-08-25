@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Twitter, MessageCircle, BarChart3, Sparkles, Shield, Brain, TrendingUp, Zap } from 'lucide-react';
 
 function App() {
- const [activeTab, setActiveTab] = useState<'home' | 'whitepaper' | 'guide' | 'trading' | 'history'>('home');
+  const [activeTab, setActiveTab] = useState<'home' | 'whitepaper' | 'guide' | 'trading' | 'history' | 'latest'>('home');
 
   const socialLinks = {
     twitter: 'https://x.com/KittySpinCTO',
@@ -67,118 +67,109 @@ function App() {
         </div>
       </div>
 
-{/* What is Kitt AI */}
-<div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-purple-500/20">
-  <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 tracking-tight">
-    What is Kitt AI?
-  </h2>
+      {/* What is Kitt AI */}
+      <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-purple-500/20">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 tracking-tight">
+          What is Kitt AI?
+        </h2>
 
-  {/* proporções harmonizadas: texto um pouco maior, imagens um pouco menores */}
-  <div className="grid md:grid-cols-[1.2fr_0.8fr] items-center gap-6 sm:gap-10">
-    {/* Esquerda: texto */}
-    <div className="space-y-6">
-      <p className="text-xl sm:text-[1.35rem] text-gray-100 leading-relaxed">
-        Kitt AI is your Personal Crypto Security and Trading Assistant, leveraging machine learning to detect
-        security risks, scams, rugs, and identify good projects. Kitt helps users navigate the crypto ecosystem in a
-        friendly and approachable manner.
-      </p>
+        <div className="grid md:grid-cols-[1.2fr_0.8fr] items-center gap-6 sm:gap-10">
+          {/* Text */}
+          <div className="space-y-6">
+            <p className="text-xl sm:text-[1.35rem] text-gray-100 leading-relaxed">
+              Kitt AI is your Personal Crypto Security and Trading Assistant, leveraging machine learning to detect
+              security risks, scams, rugs, and identify good projects. Kitt helps users navigate the crypto ecosystem in a
+              friendly and approachable manner.
+            </p>
 
-      {/* Itens com fonte e ícones maiores (mas elegantes) */}
-      <div className="space-y-4">
-        <div className="flex items-center gap-3">
-          <Shield className="text-green-400" size={30} />
-          <span className="text-gray-50 text-xl sm:text-2xl font-medium">Advanced Security Analysis</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <Brain className="text-blue-400" size={30} />
-          <span className="text-gray-50 text-xl sm:text-2xl font-medium">AI-Powered Trading Insights</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <TrendingUp className="text-purple-400" size={30} />
-          <span className="text-gray-50 text-xl sm:text-2xl font-medium">Real-time Market Calls</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <Zap className="text-yellow-400" size={30} />
-          <span className="text-gray-50 text-xl sm:text-2xl font-medium">Automated Trading Engine</span>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Shield className="text-green-400" size={30} />
+                <span className="text-gray-50 text-xl sm:text-2xl font-medium">Advanced Security Analysis</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Brain className="text-blue-400" size={30} />
+                <span className="text-gray-50 text-xl sm:text-2xl font-medium">AI-Powered Trading Insights</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <TrendingUp className="text-purple-400" size={30} />
+                <span className="text-gray-50 text-xl sm:text-2xl font-medium">Real-time Market Calls</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Zap className="text-yellow-400" size={30} />
+                <span className="text-gray-50 text-xl sm:text-2xl font-medium">Automated Trading Engine</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Images */}
+          <div className="flex flex-col items-center justify-center gap-5">
+            <img
+              src="/totoro2.png"
+              alt="Totoro"
+              className="w-full max-w-[280px] sm:max-w-[320px] h-auto object-contain rounded-2xl mx-auto"
+            />
+            <img
+              src="/moon3.png"
+              alt="Moon"
+              className="w-full max-w-[280px] sm:max-w-[320px] h-auto object-contain rounded-2xl mx-auto"
+            />
+          </div>
         </div>
       </div>
-    </div>
 
-    {/* Direita: imagens ligeiramente menores, Totoro em cima, mesmas margens */}
-    <div className="flex flex-col items-center justify-center gap-5">
-      <img
-        src="/totoro2.png"
-        alt="Totoro"
-        className="w-full max-w-[280px] sm:max-w-[320px] h-auto object-contain rounded-2xl mx-auto"
-      />
-      <img
-        src="/moon3.png"
-        alt="Moon"
-        className="w-full max-w-[280px] sm:max-w-[320px] h-auto object-contain rounded-2xl mx-auto"
-      />
-    </div>
-  </div>
-</div>
+      {/* $KS Token */}
+      <div className="bg-gradient-to-br from-yellow-900/50 to-orange-900/50 rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-yellow-500/20">
+        <div className="text-center mb-8">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 tracking-tight">
+            $KS Token
+          </h2>
+          <p className="text-lg sm:text-[1.15rem] text-gray-100 max-w-2xl mx-auto leading-relaxed">
+            $KS is the native utility token that fuels Kitt's AI operations. <br />
+            From data streaming to auto-trading, KS tokens unlock features, prioritize access, and sustain her growth.
+          </p>
+        </div>
 
+        <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-6 sm:gap-10 items-center">
+          <div className="flex justify-center">
+            <img
+              src="/SithLord2.png"
+              alt="sith"
+              className="w-full max-w-[300px] sm:max-w-[360px] h-auto object-contain rounded-2xl mx-auto"
+            />
+          </div>
 
-
-
-
- {/* $KS Token */}
-<div className="bg-gradient-to-br from-yellow-900/50 to-orange-900/50 rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-yellow-500/20">
-  <div className="text-center mb-8">
-    <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 tracking-tight">
-      $KS Token
-    </h2>
-    <p className="text-lg sm:text-[1.15rem] text-gray-100 max-w-2xl mx-auto leading-relaxed">
-      $KS is the native utility token that fuels Kitt's AI operations. <br />
-      From data streaming to auto-trading, KS tokens unlock features, prioritize access, and sustain her growth.
-    </p>
-  </div>
-
-  <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-6 sm:gap-10 items-center">
-    {/* Imagem à esquerda — levemente menor e centralizada */}
-    <div className="flex justify-center">
-      <img
-        src="/SithLord2.png"
-        alt="sith"
-        className="w-full max-w-[300px] sm:max-w-[360px] h-auto object-contain rounded-2xl mx-auto"
-      />
-    </div>
-
-    {/* Conteúdo à direita — tipografia maior e mais legível */}
-    <div className="space-y-6">
-      <div className="bg-black/30 rounded-2xl p-6 sm:p-7">
-        <h3 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-4">Token Utility</h3>
-        <ul className="space-y-3 text-gray-100">
-          <li className="flex items-center gap-3">
-            <Sparkles className="text-yellow-400" size={26} />
-            <span className="text-lg sm:text-xl">Unlock advanced AI features</span>
-          </li>
-          <li className="flex items-center gap-3">
-            <Sparkles className="text-yellow-400" size={26} />
-            <span className="text-lg sm:text-xl">Priority access to trading calls</span>
-          </li>
-          <li className="flex items-center gap-3">
-            <Sparkles className="text-yellow-400" size={26} />
-            <span className="text-lg sm:text-xl">Tiered access system (5 tiers)</span>
-          </li>
-          <li className="flex items-center gap-3">
-            <Sparkles className="text-yellow-400" size={26} />
-            <span className="text-lg sm:text-xl">Access to Kitt AI Trading Bot (Coming Soon)</span>
-          </li>
-          <li className="flex items-center gap-3">
-            <Sparkles className="text-yellow-400" size={26} />
-            <span className="text-lg sm:text-xl">Fuel for AI operations</span>
-          </li>
-        </ul>
+          <div className="space-y-6">
+            <div className="bg-black/30 rounded-2xl p-6 sm:p-7">
+              <h3 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-4">Token Utility</h3>
+              <ul className="space-y-3 text-gray-100">
+                <li className="flex items-center gap-3">
+                  <Sparkles className="text-yellow-400" size={26} />
+                  <span className="text-lg sm:text-xl">Unlock advanced AI features</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Sparkles className="text-yellow-400" size={26} />
+                  <span className="text-lg sm:text-xl">Priority access to trading calls</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Sparkles className="text-yellow-400" size={26} />
+                  <span className="text-lg sm:text-xl">Tiered access system (5 tiers)</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Sparkles className="text-yellow-400" size={26} />
+                  <span className="text-lg sm:text-xl">Access to Kitt AI Trading Bot (Coming Soon)</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Sparkles className="text-yellow-400" size={26} />
+                  <span className="text-lg sm:text-xl">Fuel for AI operations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
 
-
-      {/* Bottom Social (kept as-is) */}
+      {/* Bottom Social left intentionally empty here */}
     </div>
   );
 
@@ -1065,7 +1056,82 @@ function App() {
   </div>
 );
 
+// ==================== LATEST (NEW) ====================
+  const LatestPage = () => (
+    <div className="max-w-4xl mx-auto space-y-8">
+      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-red-500">
+        Latest 🔥
+      </h1>
 
+      <div className="bg-gradient-to-br from-amber-900/50 to-red-900/50 rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-amber-500/20 space-y-8">
+        <section>
+          <h2 className="text-2xl sm:text-3xl font-bold text-amber-300 mb-3">Kitt Is Going Multi-Chain</h2>
+          <p className="text-gray-100 leading-relaxed">
+            We’re excited to announce Kitt’s expansion across Abstract, Ethereum, and Bitcoin — with <span className="text-amber-300 font-semibold">Abstract launching first</span>.
+            This marks the start of dedicated, chain-specific Kitt deployments and communities designed to operate natively where you trade.
+          </p>
+        </section>
+
+        <section>
+          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">Launch Overview</h3>
+          <ul className="space-y-2 text-gray-100 ml-6 list-disc">
+            <li><span className="text-amber-300 font-semibold">Chains & Order:</span> Abstract (first), followed by Ethereum and Bitcoin.</li>
+            <li><span className="text-amber-300 font-semibold">Tokens:</span> Kitt Solana (KS-SOL), Kitt Abstract, KittETH, and KittBTC.</li>
+            <li><span className="text-amber-300 font-semibold">Chain-Focused Operation:</span> Each Kitt instance will focus exclusively on its respective chain and community.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">Benefits for OG Solana Holders</h3>
+          <p className="text-gray-100 leading-relaxed mb-3">
+            <span className="text-amber-300 font-semibold">OG Solana Holders</span> are defined as wallets holding ≥ 1,000,000 KS or community members recognized as active supporters over the last 8 months.
+          </p>
+
+          <div className="bg-black/30 rounded-2xl p-5 sm:p-6">
+            <h4 className="text-lg sm:text-xl font-semibold text-amber-300 mb-3">All-Chains profit/fee allocation</h4>
+            <ul className="space-y-2 text-gray-100 ml-6 list-disc">
+              <li>
+                <span className="text-amber-300 font-semibold">25%</span> — Shared with eligible OG Solana Holders (the “split-list”).{' '}
+                <span className="text-gray-200 italic">
+                  Shares of the split are proportional to KS holdings — more KS held = larger profit share.
+                </span>
+              </li>
+              <li><span className="text-amber-300 font-semibold">50%</span> — Directed to KS-SOL buybacks.</li>
+              <li><span className="text-amber-300 font-semibold">25%</span> — Allocated to Kitt operational costs.</li>
+            </ul>
+            <p className="text-orange-200/90 mt-3 text-sm">Note: Holdings must be active to receive OG benefits.</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">NFT-Kitt: Lifetime Multi-Chain Access</h3>
+          <ul className="space-y-2 text-gray-100 ml-6 list-disc">
+            <li>A limited run of Kitt NFTs will grant lifetime, multi-chain access to Kitt.</li>
+            <li>Tiered access based on NFT rarity.</li>
+            <li>Each chain will mirror Solana’s approach with tiers and holder requirements to unlock Kitt’s advanced features.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">OG Verification & Registration</h3>
+          <ul className="space-y-2 text-gray-100 ml-6 list-disc">
+            <li>A new in-app feature will let OGs verify/register to join the split-list.</li>
+            <li>This feature is targeted to go live in the coming week or so.</li>
+            <li>Please ensure your holdings remain active to maintain eligibility.</li>
+            <li>Registration will close 4 weeks after it opens.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">What to Expect Next</h3>
+          <ul className="space-y-2 text-gray-100 ml-6 list-disc">
+            <li>Concrete timelines and community onboarding details will be shared as each phase begins, starting with Abstract.</li>
+            <li>Dedicated community spaces (Telegram/Discord) will open for each chain as we roll out.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  );
 
   const renderContent = () => {
     switch (activeTab) {
@@ -1079,6 +1145,8 @@ function App() {
         return <TradingBotPage />;
       case 'history':
         return <KSHistoryPage />;
+      case 'latest':
+        return <LatestPage />;
       default:
         return <HomePage />;
     }
@@ -1118,8 +1186,8 @@ function App() {
               { id: 'whitepaper', label: 'Whitepaper', icon: '📄' },
               { id: 'guide', label: 'Starter Guide', icon: '🚀' },
               { id: 'trading', label: 'Trading Bot', icon: '🤖' },
-              // Nova aba depois de Trading Bot:
-              { id: 'history', label: 'KS Story', icon: '💖' }, // troque para 'KS Story' se preferir tom narrativo
+              { id: 'latest', label: 'Latest', icon: '🔥' }, // NEW
+              { id: 'history', label: 'KS Story', icon: '💖' },
             ].map((tab) => (
               <button
                 key={tab.id}
