@@ -1060,7 +1060,7 @@ function App() {
   const LatestPage = () => (
     <div className="max-w-4xl mx-auto space-y-8">
       <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-red-500">
-        Latest 
+        Latest News 
       </h1>
 
       <div className="bg-gradient-to-br from-amber-900/50 to-red-900/50 rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-amber-500/20 space-y-8">
