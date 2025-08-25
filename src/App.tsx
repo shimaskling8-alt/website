@@ -1060,12 +1060,12 @@ function App() {
   const LatestPage = () => (
     <div className="max-w-4xl mx-auto space-y-8">
       <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-red-500">
-        Latest 🔥
+        Latest 
       </h1>
 
       <div className="bg-gradient-to-br from-amber-900/50 to-red-900/50 rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-amber-500/20 space-y-8">
         <section>
-          <h2 className="text-2xl sm:text-3xl font-bold text-amber-300 mb-3">Kitt Is Going Multi-Chain</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-amber-300 mb-3">Kitt Is Going Multi-Chain!</h2>
           <p className="text-gray-100 leading-relaxed">
             We’re excited to announce Kitt’s expansion across Abstract, Ethereum, and Bitcoin — with <span className="text-amber-300 font-semibold">Abstract launching first</span>.
             This marks the start of dedicated, chain-specific Kitt deployments and communities designed to operate natively where you trade.
@@ -1088,7 +1088,7 @@ function App() {
           </p>
 
           <div className="bg-black/30 rounded-2xl p-5 sm:p-6">
-            <h4 className="text-lg sm:text-xl font-semibold text-amber-300 mb-3">All-Chains profit/fee allocation</h4>
+            <h4 className="text-lg sm:text-xl font-semibold text-amber-300 mb-3">Multi-Chain Profit Sharing & Allocation</h4>
             <ul className="space-y-2 text-gray-100 ml-6 list-disc">
               <li>
                 <span className="text-amber-300 font-semibold">25%</span> — Shared with eligible OG Solana Holders (the “split-list”).{' '}
