@@ -105,7 +105,7 @@ function App() {
           {/* Images */}
           <div className="flex flex-col items-center justify-center gap-5">
             <img
-              src="/totoro2.png"
+              src="/totoro3-4.png"
               alt="Totoro"
               className="w-full max-w-[280px] sm:max-w-[320px] h-auto object-contain rounded-2xl mx-auto"
             />
