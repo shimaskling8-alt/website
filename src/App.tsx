@@ -1,8 +1,32 @@
 import React, { useState } from 'react';
 import { Twitter, MessageCircle, BarChart3, Sparkles, Shield, Brain, TrendingUp, Zap } from 'lucide-react';
 
+type Tab = 'home' | 'whitepaper' | 'guide' | 'trading' | 'history' | 'latest';
+
+const parseTabFromHash = (): Tab => {
+  const allowed: Tab[] = ['home', 'whitepaper', 'guide', 'trading', 'history', 'latest'];
+  const fromHash = (typeof window !== 'undefined' ? window.location.hash : '').replace('#', '').trim();
+  return allowed.includes(fromHash as Tab) ? (fromHash as Tab) : 'home';
+};
+
+
 function App() {
-  const [activeTab, setActiveTab] = useState<'home' | 'whitepaper' | 'guide' | 'trading' | 'history' | 'latest'>('home');
+const [activeTab, setActiveTab] = useState<Tab>(parseTabFromHash());
+const navigateToTab = (tab: Tab) => {
+  setActiveTab(tab);
+  // atualiza a URL com #aba, não precisa de redirects nem router
+  history.pushState(null, '', `#${tab}`);
+};
+React.useEffect(() => {
+  const onURLChange = () => setActiveTab(parseTabFromHash());
+  window.addEventListener('hashchange', onURLChange);
+  window.addEventListener('popstate', onURLChange);
+  return () => {
+    window.removeEventListener('hashchange', onURLChange);
+    window.removeEventListener('popstate', onURLChange);
+  };
+}, []);
+
 
   const socialLinks = {
     twitter: 'https://x.com/KittySpinCTO',
@@ -1268,7 +1292,7 @@ const LatestPage = () => (
             ].map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => navigateToTab(tab.id as Tab)}
                 className={`py-4 px-6 font-semibold transition-all duration-300 border-b-2 whitespace-nowrap ${
                   activeTab === (tab.id as any)
                     ? 'border-purple-400 text-purple-400'
