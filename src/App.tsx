@@ -1057,81 +1057,158 @@ function App() {
 );
 
 // ==================== LATEST (NEW) ====================
-  const LatestPage = () => (
-    <div className="max-w-4xl mx-auto space-y-8">
-      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-red-500">
-        Latest News 
-      </h1>
+  // ==================== LATEST (UPDATED) ====================
+const LatestPage = () => (
+  <div className="max-w-4xl mx-auto space-y-8">
+    <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-red-500">
+      Kitt Ecosystem Update: Bots Availability, Profit Sharing & Multi-Chain Expansion
+    </h1>
 
-      <div className="bg-gradient-to-br from-amber-900/50 to-red-900/50 rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-amber-500/20 space-y-8">
-        <section>
-          <h2 className="text-2xl sm:text-3xl font-bold text-amber-300 mb-3">Kitt Is Going Multi-Chain!</h2>
-          <p className="text-gray-100 leading-relaxed">
-            We’re excited to announce Kitt’s expansion across Abstract, Ethereum, and Bitcoin — with <span className="text-amber-300 font-semibold">Abstract launching first</span>.
-            This marks the start of dedicated, chain-specific Kitt deployments and communities designed to operate natively where you trade.
+    <div className="bg-gradient-to-br from-amber-900/50 to-red-900/50 rounded-3xl p-6 sm:p-8 backdrop-blur-sm border border-amber-500/20 space-y-8">
+
+      {/* Bots Availability */}
+      <section className="space-y-4">
+        <h2 className="text-2xl sm:text-3xl font-bold text-amber-300">Bots Availability</h2>
+
+        <div className="bg-black/30 rounded-2xl p-5 sm:p-6">
+          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">Kitt Autotrading — Live (Solana)</h3>
+          <p className="text-gray-100">
+            Fully automated entries, exits, and risk within your parameters.
           </p>
-        </section>
+        </div>
 
-        <section>
-          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">Launch Overview</h3>
-          <ul className="space-y-2 text-gray-100 ml-6 list-disc">
-            <li><span className="text-amber-300 font-semibold">Chains & Order:</span> Abstract (first), followed by Ethereum and Bitcoin.</li>
-            <li><span className="text-amber-300 font-semibold">Tokens:</span> Kitt Solana (KS-SOL), Kitt Abstract, KittETH, and KittBTC.</li>
-            <li><span className="text-amber-300 font-semibold">Chain-Focused Operation:</span> Each Kitt instance will focus exclusively on its respective chain and community.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">Benefits for OG Solana Holders</h3>
-          <p className="text-gray-100 leading-relaxed mb-3">
-            <span className="text-amber-300 font-semibold">OG Solana Holders</span> are defined as wallets holding ≥ 1,000,000 KS or community members recognized as active supporters over the last 8 months.
+        <div className="bg-black/30 rounded-2xl p-5 sm:p-6">
+          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">Kitt Trading Bot — In Process (Solana)</h3>
+          <p className="text-gray-100">
+            1% fee per executed trade. Modes: <span className="text-amber-300">Manual</span>, <span className="text-amber-300">Assisted AI</span> (alerts/triggers), or <span className="text-amber-300">Fully AI</span>.
           </p>
+        </div>
 
-          <div className="bg-black/30 rounded-2xl p-5 sm:p-6">
-            <h4 className="text-lg sm:text-xl font-semibold text-amber-300 mb-3">Multi-Chain Profit Sharing & Allocation</h4>
-            <ul className="space-y-2 text-gray-100 ml-6 list-disc">
-              <li>
-                <span className="text-amber-300 font-semibold">25%</span> — Shared with eligible OG Solana Holders (the “split-list”).{' '}
-                <span className="text-gray-200 italic">
-                  Shares of the split are proportional to KS holdings: more KS held = larger profit share.
-                </span>
-              </li>
-              <li><span className="text-amber-300 font-semibold">50%</span> — Directed to KS-SOL buybacks.</li>
-              <li><span className="text-amber-300 font-semibold">25%</span> — Allocated to Kitt operational costs.</li>
-            </ul>
-            <p className="text-orange-200/90 mt-3 text-sm">Note: Holdings must be active to receive OG benefits.</p>
-          </div>
-        </section>
+        <div className="bg-black/30 rounded-2xl p-5 sm:p-6">
+          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">Kitt Volume Bot — In Process (Solana)</h3>
+          <p className="text-gray-100">
+            Focused on volume dynamics with actionable alerts and optional triggers.
+          </p>
+          <p className="text-orange-200/90 mt-2 text-sm">
+            Allocation: <span className="text-amber-300 font-semibold">25%</span> of Volume Bot profits flow to Solana OGs (included in the Solana breakdown below).
+          </p>
+        </div>
+      </section>
 
-        <section>
-          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">NFT-Kitt: Lifetime Multi-Chain Access</h3>
-          <ul className="space-y-2 text-gray-100 ml-6 list-disc">
-            <li>A limited run of Kitt NFTs will grant lifetime, multi-chain access to Kitt.</li>
-            <li>Tiered access based on NFT rarity.</li>
-            <li>Each chain will mirror Solana’s approach with tiers and holder requirements to unlock Kitt’s advanced features.</li>
+      {/* Multi-chain */}
+      <section className="space-y-3">
+        <h2 className="text-2xl sm:text-3xl font-bold text-amber-300">Multi-Chain</h2>
+        <p className="text-gray-100">
+          Additional chains launch as dedicated interest forms. Each chain runs natively with its own community and budget.
+          <span className="block mt-1 text-orange-200/90">Solana OGs receive a cross-chain share (see below).</span>
+        </p>
+      </section>
+
+      {/* Profit-Sharing — Solana */}
+      <section className="space-y-4">
+        <h2 className="text-2xl sm:text-3xl font-bold text-amber-300">Profit-Sharing — Finalized Breakdown</h2>
+        <h3 className="text-xl sm:text-2xl font-semibold text-red-300">Solana (KS-SOL)</h3>
+
+        <div className="bg-black/30 rounded-2xl p-5 sm:p-6">
+          <ul className="space-y-2 text-gray-100 list-disc ml-6">
+            <li><span className="text-amber-300 font-semibold">20% — OGs (Solana)</span><br />
+              <span className="text-gray-200">Distributed via an OG bucket (static base + scalable by holdings).</span>
+            </li>
+            <li><span className="text-amber-300 font-semibold">5% — “Whales” (≥ 10,000,000 KS)</span><br />
+              <span className="text-gray-200">Static share across all qualifying addresses (snapshot mechanics to be published).</span>
+            </li>
+            <li><span className="text-amber-300 font-semibold">25% — Operating (Solana)</span><br />
+              <span className="text-gray-200">Infra, data streams, security, model serving, and community ops.</span>
+            </li>
+            <li><span className="text-amber-300 font-semibold">25% — Chain-Specific Buybacks (Solana)</span><br />
+              <span className="text-gray-200">Programmatic buybacks of KS-SOL to support the Solana ecosystem.</span>
+            </li>
+            <li><span className="text-amber-300 font-semibold">25% — Team</span></li>
           </ul>
-        </section>
+          <p className="text-orange-200/90 mt-3 text-sm">
+            Applies to profits/fees generated on Solana, including Volume Bot revenue.
+          </p>
+        </div>
+      </section>
 
-        <section>
-          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">OG Verification & Registration</h3>
-          <ul className="space-y-2 text-gray-100 ml-6 list-disc">
-            <li>A new in-app feature will let OGs verify/register to join the split-list.</li>
-            <li>This feature is targeted to go live in the coming week or so.</li>
-            <li>Please ensure your holdings remain active to maintain eligibility.</li>
-            <li>Registration will close 4 weeks after it opens.</li>
+      {/* Other Chains */}
+      <section className="space-y-4">
+        <h3 className="text-xl sm:text-2xl font-semibold text-red-300">Other Chains (when launched)</h3>
+        <div className="bg-black/30 rounded-2xl p-5 sm:p-6">
+          <ul className="space-y-2 text-gray-100 list-disc ml-6">
+            <li><span className="text-amber-300 font-semibold">25% — Solana OGs (cross-chain allocation)</span><br />
+              <span className="text-gray-200">Distributed to Solana OGs using the same OG split method.</span>
+            </li>
+            <li><span className="text-amber-300 font-semibold">25% — Team</span></li>
+            <li><span className="text-amber-300 font-semibold">25% — Operating (that chain)</span></li>
+            <li><span className="text-amber-300 font-semibold">25% — Chain-Specific Buybacks (that chain)</span><br />
+              <span className="text-gray-200">Buybacks are performed on the native Kitt token for that chain.</span>
+            </li>
           </ul>
-        </section>
+          <p className="text-orange-200/90 mt-3 text-sm">
+            After the 25% Solana OG allocation, the remaining 75% stays on that chain and is split among Team / Operating / Chain-Specific Buybacks to fund that chain’s growth and sustainability.
+          </p>
+        </div>
+      </section>
 
-        <section>
-          <h3 className="text-xl sm:text-2xl font-semibold text-red-300 mb-2">What to Expect Next</h3>
-          <ul className="space-y-2 text-gray-100 ml-6 list-disc">
-            <li>Concrete timelines and community onboarding details will be shared as each phase begins, starting with Abstract.</li>
-            <li>Dedicated community spaces (Telegram/Discord) will open for each chain as we roll out.</li>
+      {/* Cross-Chain Policy */}
+      <section className="space-y-3">
+        <h2 className="text-2xl sm:text-3xl font-bold text-amber-300">Cross-Chain Policy (Recap)</h2>
+        <ul className="space-y-2 text-gray-100 list-disc ml-6">
+          <li>Solana OGs receive <span className="text-amber-300 font-semibold">25%</span> of profits/fees from each non-Solana chain.</li>
+          <li>The remaining <span className="text-amber-300 font-semibold">75%</span> of each non-Solana chain’s profits stays on that chain (split 25% Team / 25% Operating / 25% Chain-Specific Buybacks).</li>
+        </ul>
+      </section>
+
+      {/* OG Eligibility & Registration */}
+      <section className="space-y-4">
+        <h2 className="text-2xl sm:text-3xl font-bold text-amber-300">OG Eligibility & Registration</h2>
+        <div className="bg-black/30 rounded-2xl p-5 sm:p-6">
+          <h4 className="text-lg sm:text-xl font-semibold text-red-300 mb-2">To qualify as OG:</h4>
+          <ul className="space-y-2 text-gray-100 list-disc ml-6">
+            <li>Register during the <span className="text-amber-300 font-semibold">4-week OG window</span> (opens soon).</li>
+            <li>Maintain <span className="text-amber-300 font-semibold">&gt; 1,000,000 KS</span> continuously.</li>
           </ul>
-        </section>
-      </div>
+
+          <h4 className="text-lg sm:text-xl font-semibold text-red-300 mt-4 mb-2">Loss of Status:</h4>
+          <p className="text-gray-100">Dropping below 1,000,000 KS at any time causes a permanent loss of OG status (non-recoverable).</p>
+
+          <h4 className="text-lg sm:text-xl font-semibold text-red-300 mt-4 mb-2">Process:</h4>
+          <p className="text-gray-100">
+            An in-app OG registration flow will go live soon and remain open for 4 weeks. Exact start date will be announced in official channels.
+          </p>
+        </div>
+      </section>
+
+      {/* Definitions */}
+      <section className="space-y-3">
+        <h2 className="text-2xl sm:text-3xl font-bold text-amber-300">Definitions</h2>
+        <ul className="space-y-2 text-gray-100 list-disc ml-6">
+          <li><span className="text-amber-300 font-semibold">OGs:</span> Recognized early/active supporters who register and maintain &gt; 1,000,000 KS.</li>
+          <li><span className="text-amber-300 font-semibold">Whales:</span> Solana addresses with ≥ 10,000,000 KS at snapshot time.</li>
+        </ul>
+      </section>
+
+      {/* Notes & Disclosures */}
+      <section className="space-y-4">
+        <h2 className="text-2xl sm:text-3xl font-bold text-amber-300">Notes & Disclosures</h2>
+        <div className="bg-black/30 rounded-2xl p-5 sm:p-6 space-y-3">
+          <p className="text-gray-100">
+            <span className="text-amber-300 font-semibold">Trading modes:</span> Manual, Assisted AI (alerts/triggers), Fully AI. Kitt can monitor many dimensions (volume, liquidity, trend, volatility, LP changes, risk metrics) or a single signal (e.g., volume-only) and suggest actions (e.g., “Volume is dropping fast—proceed, adjust, or pause?”).
+          </p>
+          <p className="text-gray-100">
+            <span className="text-amber-300 font-semibold">Distribution mechanics:</span> Snapshot timing, cadence, and per-wallet math for OG/Whale buckets and buyback execution details will be published prior to the first distribution.
+          </p>
+          <p className="text-gray-300 text-sm">
+            This is not financial advice. Details may be refined as we finalize implementation and publish product docs.
+          </p>
+        </div>
+      </section>
+
     </div>
-  );
+  </div>
+);
+
 
   const renderContent = () => {
     switch (activeTab) {
